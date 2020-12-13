@@ -33,8 +33,8 @@
 			"kernel.ld"
 		],
 		"Pre": [
-			"mksys -o systab.c -mode=systab.c /sys/src/sysconf.json",
-			"mksys -o errstr.h -mode=errstr.h /sys/src/sysconf.json"
+			"go run github.com/Harvey-OS/harvey/util/src/harvey/cmd/mksys -o systab.c -mode=systab.c /sys/src/sysconf.json",
+			"go run github.com/Harvey-OS/harvey/util/src/harvey/cmd/mksys -o errstr.h -mode=errstr.h /sys/src/sysconf.json"
 		],
 		"Projects": [
 			"clean.json",

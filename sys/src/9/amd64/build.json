@@ -2,10 +2,7 @@
 	{
 		"Name": "cpu",
 		"Env": [
-			"CONF=cpu",
-			"GO111MODULE=off",
-			"GOOS=plan9",
-			"GOARCH=amd64"
+			"CONF=cpu"
 		],
 		"Include": [
 			"core.json",
@@ -13,6 +10,9 @@
 			"../ip/ip.json",
 			"../port/port.json",
 			"u-root.json"
+		],
+		"Pre": [
+			"env GOOS=plan9 GOARCH=amd64 go build -o tmpfs harvey-os.org/cmd/tmpfs"
 		],
 		"Kernel": {
 			"Config": {
@@ -118,7 +118,7 @@
 				"sed": "/$ARCH/bin/sed",
 				"srv": "/$ARCH/bin/srv",
 				"startdisk": "startdisk",
-				"tmpfs": "/plan9_$ARCH/bin/tmpfs",
+				"tmpfs": "tmpfs",
 				"usbd": "/$ARCH/bin/usb/usbd",
 				"venti": "/$ARCH/bin/venti/venti",
 				"vga": "/$ARCH/bin/aux/vga",

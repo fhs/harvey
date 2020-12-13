@@ -16,7 +16,7 @@
 		"Install": "/sys/src/9/boot",
 		"Library": "libboot.a",
 		"Pre": [
-			"mksys -o bootcpu.c -mode=bootcpu.c /sys/src/sysconf.json"
+			"go run github.com/Harvey-OS/harvey/util/src/harvey/cmd/mksys -o bootcpu.c -mode=bootcpu.c /sys/src/sysconf.json"
 		],
 		"SourceFiles": [
 			"aux.c",

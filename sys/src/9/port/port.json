@@ -8,7 +8,7 @@
 			"-fasm"
 		],
 		"Pre": [
-			"mksys -o ../port/error.h -mode=error.h /sys/src/sysconf.json"
+			"go run github.com/Harvey-OS/harvey/util/src/harvey/cmd/mksys -o ../port/error.h -mode=error.h /sys/src/sysconf.json"
 		],
 		"SourceFiles": [
 			"../port/alarm.c",

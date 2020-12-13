@@ -29,7 +29,7 @@
 			"rm -f init.h"
 		],
 		"Post": [
-			"elf2c init.h init"
+			"go run github.com/Harvey-OS/harvey/util/src/harvey/cmd/elf2c init.h init"
 		],
 		"Program": "init",
 		"SourceFiles": [

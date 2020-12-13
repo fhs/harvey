@@ -16,7 +16,7 @@
 		],
 		"Post": [
 			"rm -f *.o *.a",
-			"data2c ramfs_bootcpu_ ../boot/bootcpu.elf.out ../$ARCH/cpu.c"
+			"go run github.com/Harvey-OS/harvey/util/src/harvey/cmd/data2c ramfs_bootcpu_ ../boot/bootcpu.elf.out ../$ARCH/cpu.c"
 		],
 		"Program": "bootcpu.elf.out",
 		"Projects": [
